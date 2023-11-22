@@ -1,0 +1,376 @@
+/* MOBILE FIRST */
+
+body{
+    background-color: rgb(75, 75, 112);
+    color: aqua;
+    font-family: "Trirong", serif;
+}
+
+h1{
+    font-size: x-large;
+    font-family: "Sofia", 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h2{
+    font-size: medium;
+    font-family: "Sofia", 'Arial Narrow', Arial, sans-serif;
+    color:rgb(218, 218, 29);
+}
+
+h3{
+    font-size: small;
+    font-family: "Trirong", Geneva, Tahoma, sans-serif;
+    color:chartreuse
+}
+
+p{
+line-height: 32px;
+}
+
+img{
+    border: solid 5px red;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+    width: 200px;
+    
+}
+
+img:hover {
+    transform: rotate(10deg); 
+    transition: transform 0.3s ease; 
+}
+
+img {
+    display: inline-block;
+    margin: auto;
+}
+
+
+span.a{
+    display: inline-block;
+    margin-left: auto;
+}
+
+nav{
+    border: 2px solid green;
+    list-style-type: none;
+    text-align: center;
+    padding-bottom: 20px;
+    background-image: url('https://img.freepik.com/premium-photo/dark-cyan-old-cement-plaster-wall-with-crack-grunge-texture-background_150101-1733.jpg');
+}
+
+
+nav ul{
+    display:inline-block;
+}
+
+li{
+    display: inline-block;
+    height: auto;
+    padding-top: 10px;
+    color: white;
+}
+
+.current {
+    border-color: red;
+    font-size: larger;
+}
+
+nav li:active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+nav a{
+    background-color: green;
+    padding: 5px;
+    margin: 20px;    
+}
+
+a{
+    text-align: underline;
+    border: solid rgb(174, 174, 197);
+}
+
+a[href= '#main']{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+}
+
+
+a[href= '#main']:focus {
+    transform: translateY(0%);
+
+}
+
+.thumbnail{
+    border: 20px solid white;
+}
+
+
+#skip:focus{
+    left: 2000px;
+    }
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.horiz-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.vert-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: 
+}
+
+.vert-container img:nth-child(1) {
+    grid-row: 1 / span 2; 
+    width: 50%;
+    height: auto;
+}
+
+.vert-container img:nth-child(2), .vert-container img:nth-child(3) {
+    width: 50%;
+    height: auto;
+}
+
+.transition-header {
+    transition: transform 1s ease;
+}
+
+.transition-header:hover {
+    transform: translateX(300px);
+}
+
+.gifs {
+    display:inline;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #117214;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1b671f;
+  }
+
+#travelForm {
+    max-width: 400px; 
+    margin: auto; 
+    padding: 20px;
+    background-color: #f9f9f963; 
+}
+
+#travelForm input[type="text"] {
+    width: 100%; 
+    padding: 5px; 
+    border: 2px solid #ddd; 
+}
+
+#result {
+    margin-top: 15px; 
+    padding: 5px; 
+    background-color: #f9f9f963; 
+    color:cyan; 
+    text-align: center; 
+    width: auto; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .transition-header {
+        transition: none;
+    }
+
+    .gifs {
+        display:none;
+    }
+}
+
+
+/* TABLET */
+
+@media screen and (min-width: 900px) and (max-width: 1399px){
+
+    body {
+        background-color: rgb(51, 52, 88);
+        color: aqua;
+        padding-left: 200px;
+    }
+        
+    nav {
+        border: 2px solid green;
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 200px; 
+        height: 100%; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding-top: 20px; 
+    }
+    
+    li {
+        height: 80px;
+        color: pink;
+        
+    }
+    
+    nav a {
+        background-color: rgb(128, 10, 245);
+        padding: 15px;
+        margin: 10px;   
+        font-size:larger;
+        display: block; 
+        text-decoration: none; 
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+    }
+    
+    .horiz-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
+    }
+    
+    .vert-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr; 
+        grid-template-rows: 
+    }
+    
+    .vert-container img:nth-child(1) {
+        grid-row: 1 / span 2; 
+        width: 80%;
+        height: auto;
+    }
+    
+    .vert-container img:nth-child(2), .vert-container img:nth-child(3) {
+        width: 80%;
+        height: auto;
+    }
+
+
+
+    img{
+        width: 350px;
+    }
+
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1400px){
+
+body{
+    background-color: rgb(7, 7, 42);  
+    color: aqua;
+}
+
+h1{
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h3{
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:chartreuse
+}
+
+p{
+line-height: 32px;
+}
+
+img{
+    width: 500px;
+}
+
+span.a{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+nav{
+    border: 2px solid green;
+}
+
+li{
+    display: inline-block;
+    height: 50px;
+    color: pink
+}
+
+nav a{
+    background-color: rgb(84, 84, 84);
+    padding: 5px;
+    margin: 20px;    
+}
+
+a{
+    text-align: underline;
+    border: solid rgb(174, 174, 197);
+}
+
+/* #skip{
+    text-transform: uppercase;
+} */
+
+.thumbnail{
+    border: 20px solid white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+}
+
+.horiz-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+.vert-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    grid-template-rows: 
+}
+
+.vert-container img:nth-child(1) {
+    grid-row: 1 / span 2; 
+    width: 100%;
+    height: auto;
+}
+
+.vert-container img:nth-child(2), .vert-container img:nth-child(3) {
+    width: 100%;
+    height: auto;
+}
+
+
+}
